@@ -217,7 +217,8 @@ space with cut command, then select which one of these "cuts" i.e. fields you wa
 
 The final solution :
 $ cat paxillus.fna | grep ">" | tr -d ">" | cut -d " " -f 1 | tr -d "\n" > paxidfile.fna
-
+with cut command you cut the line based on (in this case) a delimiter (empty space). After this you need to select which of the fragment you wanna print, process or such.
+This is where you need to include -f 1 (or -f 2, -f3) depending on which fragment you want!
  
 4. Count the number of unique directories specified in your PATH variable
 /home/inf-54-2020/.local/bin:/home/inf-54-2020/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
@@ -229,10 +230,10 @@ echo "local/bin:/home/inf-54-2020/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/u
 
 echo $(cat paxidfile.fna | sed 's/[^:]//g' | awk '{ print length }')
 
+sed vs tr
+https://unix.stackexchange.com/questions/427940/main-difference-between-tr-translate-to-sed-and-awk 
 
 Quizzes
-
-
 
 Create a file containing only the sequence ids. The id is the string up to the first whitespace.
 
