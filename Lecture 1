@@ -232,6 +232,8 @@ echo $(cat paxidfile.fna | sed 's/[^:]//g' | awk '{ print length }')
 
 sed vs tr
 https://unix.stackexchange.com/questions/427940/main-difference-between-tr-translate-to-sed-and-awk 
+keep this mind about the order of things in sed:
+'s/from/to/'
 
 Quizzes
 
