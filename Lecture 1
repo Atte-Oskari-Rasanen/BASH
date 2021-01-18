@@ -198,6 +198,8 @@ when you use grep -o, it selects the desired strings (selects the lines with thi
 wc -l instead of wc -c since the -c counts individual characters but -l counts the lines of the outputs which is what you want!! Since you want to find the substrings
 which you then print out and then command | wc -l counts how many times you found it
 
+Or just: 
+grep -o 'GAAGTC' paxillus.fna | wc -l
 
 **3. Make a file with only the sequence ids. The id is the string up to the first space. Remove the>sign.** 
 The ids should be output on one lineonly and be separated by spaces, like:
